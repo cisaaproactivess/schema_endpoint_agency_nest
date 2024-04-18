@@ -6,7 +6,7 @@ export class UsersController {
   updatePasswordEmail(@Body() payload: { email: string }): object {
     return {
       data: {
-        message: `Se ha enviado un enlace para restablecer la contraseña a tu correo electrónico ${payload}.`,
+        message: `Se ha enviado un enlace para restablecer la contraseña a tu correo electrónico ${payload.email}.`,
         result: '1-661ee2ef-2ab2a3866e6a6505362b14df',
       },
       status: 'Ok',
@@ -22,7 +22,7 @@ export class UsersController {
   ): object {
     return {
       data: {
-        message: `Contraseña restablecida con éxito con su correo: ${payload.email}.`,
+        message: ' Contraseña restablecida con éxito con su correo:',
         result: null,
       },
       status: 'Ok',
@@ -70,7 +70,7 @@ export class UsersController {
       data: {
         message: `Datos obtenidos correctamente con este ${id}`,
         result: {
-          id: 47,
+          id: id,
           email: 'camilo.saavedra+0001@proactivess.cl',
           name: 'Admin',
           lastName: 'admin',
@@ -201,6 +201,4 @@ export class UsersController {
       error: null,
     };
   }
-
-  
 }
