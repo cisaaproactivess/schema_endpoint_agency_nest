@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "6f189b6e-84a6-4a76-b3bf-fd80ca45c171",
+		"name": "agencyMaqueteoreqestResponse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31617776",
+		"_collection_link": "https://gold-resonance-948595.postman.co/workspace/New-Team-Workspace~fe792531-d3c5-4843-bef2-abbce012b602/collection/31617776-6f189b6e-84a6-4a76-b3bf-fd80ca45c171?action=share&source=collection_link&creator=31617776"
+	},
+	"item": [
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "listar todas las compañias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/companies/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarcompañiasV2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/companies/getAll/v2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies",
+								"getAll",
+								"v2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear compañia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Emprecccbsa 1\",\r\n    \"category\":\" Categoría 1\",\r\n    \"razon_social\": \"Razófn Social 1\",\r\n    \"RFC\":\"RcccdcFdvñddffñssflñnvC1\",\r\n    \"url\": \"http://empresa1.com\",\r\n    \"address\": \"Dirección 1\",\r\n    \"country\": \"País 1\",\r\n    \"city\": \"Ciudad 1\",\r\n    \"postal_code\": \"CP1\",\r\n    \"phone\": \"123456789\",\r\n    \"emailUser\":\"camilo.saavedra@proacticvess.cl\",\r\n    \"nameUser\":\"memmott30\",\r\n    \"lastNameUser\":\"sanchez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/companies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar compañias por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/companies/getCompany/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies",
+								"getCompany",
+								":id"
+							],
+							"variable": [
+								{
+									"id": 0,
+									"key": "id",
+									"value": "4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "update-password-email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"camilo.saavedra+0003@proactivess.cl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/update-password-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update-password-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualiza password con token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1JddjmpM$\",\r\n    \"confirmPassword\": \"1JddjmpM$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/update-password/:token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update-password",
+								":token"
+							],
+							"variable": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"camilo.saavedra+0003@proactivess.cl\",\r\n    \"password\": \"1JddjmpM$\",\r\n    \"newPassword\": \"1jddjmpm\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar usuarios por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/getUser/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"getUser",
+								":id"
+							],
+							"variable": [
+								{
+									"id": 0,
+									"key": "id",
+									"value": "4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerImagenPor Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/get-image/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"get-image",
+								":id"
+							],
+							"variable": [
+								{
+									"id": 0,
+									"key": "id",
+									"value": "4",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualziar admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/update/admin/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"update",
+								"admin",
+								":id"
+							],
+							"variable": [
+								{
+									"id": 0,
+									"key": "id",
+									"value": "ss",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregarAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Marcelo \",\r\n    \"lastName\": \"Emotte\",\r\n    \"email\": \"camilo.saavedra+5000@proactivess.cl\",\r\n    \"role\": \"editor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/add/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"add",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear  nuevo post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"\",\r\n    \"category\": \"\",\r\n    \"content\": \"\",\r\n    \"user_id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
