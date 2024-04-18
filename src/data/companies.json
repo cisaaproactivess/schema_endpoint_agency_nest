@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "name": "Empresa Uno",
+      "category": "Tecnología",
+      "razon_social": "Razón Social Uno",
+      "RFC": "RFC123456A",
+      "url": "https://www.empresauno.com",
+      "address": "Calle Uno, Ciudad Uno",
+      "country": "País Uno",
+      "city": "Ciudad Uno",
+      "phone": "1234567890",
+      "created_at": "2024-04-17T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Empresa Dos",
+      "category": "Servicios",
+      "razon_social": "Razón Social Dos",
+      "RFC": "RFC654321B",
+      "url": "https://www.empresados.com",
+      "address": "Avenida Dos, Ciudad Dos",
+      "country": "País Dos",
+      "city": "Ciudad Dos",
+      "phone": "0987654321",
+      "created_at": "2024-04-17T09:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Empresa Tres",
+      "category": "Salud",
+      "razon_social": "Razón Social Tres",
+      "RFC": "RFC789012C",
+      "url": "https://www.empresatres.com",
+      "address": "Calle Tres, Ciudad Tres",
+      "country": "País Tres",
+      "city": "Ciudad Tres",
+      "phone": "1357924680",
+      "created_at": "2024-04-17T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "Empresa Cuatro",
+      "category": "Alimentación",
+      "razon_social": "Razón Social Cuatro",
+      "RFC": "RFC246813D",
+      "url": "https://www.empresacuatro.com",
+      "address": "Avenida Cuatro, Ciudad Cuatro",
+      "country": "País Cuatro",
+      "city": "Ciudad Cuatro",
+      "phone": "2468013579",
+      "created_at": "2024-04-17T11:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "name": "Empresa Cinco",
+      "category": "Educación",
+      "razon_social": "Razón Social Cinco",
+      "RFC": "RFC369258E",
+      "url": "https://www.empresacinco.com",
+      "address": "Calle Cinco, Ciudad Cinco",
+      "country": "País Cinco",
+      "city": "Ciudad Cinco",
+      "phone": "3692581470",
+      "created_at": "2024-04-17T12:00:00.000Z"
+    }
+  ]
+  
