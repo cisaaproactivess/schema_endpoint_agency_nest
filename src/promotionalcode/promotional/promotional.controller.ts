@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
-@Controller('promotional')
+@Controller('api/promotional')
 export class PromotionalController {
   @Post('generate ')
   generatePromotionalCode(

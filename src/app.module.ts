@@ -6,6 +6,7 @@ import { PostsController } from './posts/posts.controller';
 import { LoginController } from './auth/login/login.controller';
 import { UsersController } from './users/users/users.controller';
 import { PromotionalController } from './promotionalcode/promotional/promotional.controller';
+import { TagsController } from './content/tags/tags.controller';
 
 @Module({
   imports: [],
@@ -16,6 +17,7 @@ import { PromotionalController } from './promotionalcode/promotional/promotional
     LoginController,
     UsersController,
     PromotionalController,
+    TagsController,
   ],
   providers: [AppService],
 })

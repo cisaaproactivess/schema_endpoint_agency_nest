@@ -193,6 +193,70 @@ export class PostsController {
     };
   }
 
+  @Get('get/post-history-flow/')
+  getPostHistoryFlow2(): object {
+    return {
+      data: {
+        message: 'Registros encontrados exitosamente',
+        result: [
+          {
+            id: 203,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 1,
+            message: 'Creado',
+            created_at: '2023-07-17T20:28:33.000Z',
+          },
+          {
+            id: 204,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 2,
+            message: 'En espera de pago',
+            created_at: '2023-07-17T20:28:33.000Z',
+          },
+          {
+            id: 544,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 3,
+            message: 'Pagado',
+            created_at: '2023-08-30T00:50:22.000Z',
+          },
+          {
+            id: 545,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 5,
+            message: 'En espera de publicacion',
+            created_at: '2023-08-30T00:50:23.000Z',
+          },
+          {
+            id: 567,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 6,
+            message: 'En publicación',
+            created_at: '2023-08-30T20:37:58.000Z',
+          },
+          {
+            id: 568,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 5,
+            message: 'TEST TEST TEST',
+            created_at: '2023-08-30T20:38:14.000Z',
+          },
+          {
+            id: 569,
+            posts_id: '0a470507-06df-45c4-880e-b22a0b5fce5f',
+            state_id: 6,
+            message: 'En publicación',
+            created_at: '2023-08-30T20:38:26.000Z',
+          },
+        ],
+        count: 7,
+      },
+      status: 'Ok',
+      code: 200,
+      error: null,
+    };
+  }
+
   @Get('getAll/V2')
   getAllPostsV2(): object {
     return {
@@ -2682,6 +2746,26 @@ export class PostsController {
     };
   }
 
+  @Post('/create')
+  crateNewPost() {
+    return {
+      data: {
+        message: 'Post creado correctamente',
+        result: {
+          fieldCount: 0,
+          affectedRows: 1,
+          insertId: 296,
+          info: '',
+          serverStatus: 2,
+          warningStatus: 0,
+        },
+      },
+      status: 'Ok',
+      code: 200,
+      error: null,
+    };
+  }
+
   @Post('update/in-publication/:id')
   updatePosts(@Param('id') id: number): object {
     return {
@@ -2755,6 +2839,71 @@ export class PostsController {
         imageUrl: [
           'https://agency-posts-images.s3.us-east-1.amazonaws.com/post_id%3Ac6d62f0f-c932-41e5-8473-ff24f1e76a9e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAQGNFOHYDRCHRAU6H%2F20240417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240417T140620Z&X-Amz-Expires=60&X-Amz-Signature=297f2634d4b32aaa68c687a4446b29f6468e5a53bcb0c84117a36ab45bee4fcb&X-Amz-SignedHeaders=host&x-id=GetObject',
         ],
+      },
+      status: 'Ok',
+      code: 200,
+      error: null,
+    };
+  }
+
+  @Get('/getCategories')
+  getCategories(): any {
+    return {
+      data: {
+        message: 'Registros encontrados exitosamente',
+        result: [
+          {
+            id: 1,
+            name: 'Marketing',
+            instructions: 'Instrucciones para el contenido.',
+            max_characters: 3000,
+            active: 1,
+            price: '130.00',
+            updated_at: null,
+            created_at: '2024-03-09T00:07:44.000Z',
+          },
+          {
+            id: 2,
+            name: 'Mercados',
+            instructions: 'Instrucciones para el contenido.',
+            max_characters: 3000,
+            active: 1,
+            price: '130.00',
+            updated_at: null,
+            created_at: '2024-03-09T00:07:45.000Z',
+          },
+          {
+            id: 3,
+            name: 'Agencias',
+            instructions: 'Instrucciones para el contenido.',
+            max_characters: 3000,
+            active: 1,
+            price: '130.00',
+            updated_at: null,
+            created_at: '2024-03-09T00:07:45.000Z',
+          },
+          {
+            id: 4,
+            name: 'Notas Principales',
+            instructions: 'Instrucciones para el contenido.',
+            max_characters: 3000,
+            active: 1,
+            price: '130.00',
+            updated_at: null,
+            created_at: '2024-03-09T00:07:45.000Z',
+          },
+          {
+            id: 5,
+            name: null,
+            instructions: '',
+            max_characters: null,
+            active: null,
+            price: null,
+            updated_at: null,
+            created_at: '2024-04-18T18:21:14.000Z',
+          },
+        ],
+        count: 5,
       },
       status: 'Ok',
       code: 200,
