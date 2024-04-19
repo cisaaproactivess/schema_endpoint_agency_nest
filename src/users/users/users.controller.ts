@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
-@Controller('users')
+@Controller('api/users')
 export class UsersController {
   @Post('update-password-email')
   updatePasswordEmail(@Body() payload: { email: string }): object {

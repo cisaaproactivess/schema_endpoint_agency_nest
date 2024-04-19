@@ -1,12 +1,24 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Res,
+} from '@nestjs/common';
+import { Response } from 'express';
 
 @Controller('login')
 export class LoginController {
   @Post('/access')
-  access(@Body() payload: { email: string; password: string }): object {
-    return {
+  access(
+    @Res() res: Response,
+    @Body() payload: { email: string; password: string },
+  ): any {
+    res.status(200).json({
       data: {
-        message: 'Acceso permitido!',
+        message: 'asdad',
         result: [
           {
             id: 48,
@@ -30,6 +42,6 @@ export class LoginController {
       status: 'Ok',
       code: 200,
       error: null,
-    };
+    });
   }
 }
