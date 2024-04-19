@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
-@Controller('companies')
+@Controller('api/companies')
 export class CompaniesController {
   @Get('getAll')
   getCompanies(): object {
