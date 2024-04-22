@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 import { Response } from 'express';
 
-@Controller('login')
+@Controller('api/login')
 export class LoginController {
   @Post('/access')
   access(
@@ -29,23 +29,7 @@ export class LoginController {
               '$2a$10$/eha13LEp2ZVu7MtWJxfuOx2JgicbVRG9v.LhH5QzeHZLvvloKt7i',
             company: 'Test',
             company_id: 60,
-            role: 'user',
-            publicaciones: 11,
-            status: 'Activo',
-            created_at: '2023-01-18T19:31:54.000Z',
-            img: 'perfil:48-8a3ae301-2d8b-44d2-8230-c723554f9c46',
-            password_reset_token: null,
-            password_reset_token_expiration: null,
-          },
-          {
-            id: 48,
-            email: 'alejoemmott@gmail.com',
-            name: 'marcelo',
-            lastName: 'emmott',
-            password: '123456',
-            company: 'Test',
-            company_id: 60,
-            role: 'user',
+            role: 'admin',
             publicaciones: 11,
             status: 'Activo',
             created_at: '2023-01-18T19:31:54.000Z',
