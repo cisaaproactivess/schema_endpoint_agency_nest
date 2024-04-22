@@ -112,7 +112,7 @@ export class CompaniesController {
     };
   }
 
-  @Post()
+  @Post('add')
   createCompany(
     @Body()
     payload: {

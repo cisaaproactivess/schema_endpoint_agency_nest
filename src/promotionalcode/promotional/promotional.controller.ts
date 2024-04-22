@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('api/promotional')
 export class PromotionalController {
-  @Post('generate ')
+  @Post('generate')
   generatePromotionalCode(
     @Body()
     payload: {
